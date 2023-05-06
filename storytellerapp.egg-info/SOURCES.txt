@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+storytellerapp/__init__.py
+storytellerapp.egg-info/PKG-INFO
+storytellerapp.egg-info/SOURCES.txt
+storytellerapp.egg-info/dependency_links.txt
+storytellerapp.egg-info/requires.txt
+storytellerapp.egg-info/top_level.txt
