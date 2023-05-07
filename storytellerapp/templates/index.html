@@ -7,11 +7,10 @@
     <title>Home Page</title>
 </head>
 <body>
+    <a href="{{ url_for('register') }}">Register Here</a>
+    <a href="{{ url_for('login') }}">Login Here</a>
+    <img src="{{ url_for('static', filename='fairytale.png') }}" class="icon" />
     <h1>Welcome to Storyteller</h1>
-    <form action="/ai_story" method="post">
-        <input type="text" name="childname" placeholder="Enter your child's name" required />
-        <input type="text" name="monster" placeholder="Enter your monster here" required />
-        <input type="submit" value="Generate story" />
-    </form>
+    
 </body>
 </html>

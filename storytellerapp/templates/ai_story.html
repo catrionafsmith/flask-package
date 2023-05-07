@@ -7,6 +7,11 @@
     <title>AI_Story</title>
 </head>
 <body>
+    <form action="/ai_story" method="post">
+        <input type="text" name="childname" placeholder="Enter your child's name" required />
+        <input type="text" name="monster" placeholder="Enter your monster here" required />
+        <input type="submit" value="Generate story" />
+    </form>
     {% if result %}
     <div class="result">{{ result }}</div>
     {% endif %}
