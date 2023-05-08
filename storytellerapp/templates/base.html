@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='sticky-footer-navbar.css')}}">
     <link href="{{ url_for('static', filename='jumbotrons.css')}}" rel="stylesheet">
-  
-    <title>Base Document</title>
+    <!-- Add favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='fairytale.png')}}">
+    <title>BedtimeBard</title>
 </head>
 <body class="d-flex flex-column h-100">
     
@@ -21,7 +22,9 @@
         <!-- Fixed navbar -->
         <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">BedtimeBard</a>
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='fairytale.png') }}" alt="logo" width="25" height="25" class="d-inline-block align-text-top" />
+                BedtimeBard</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
