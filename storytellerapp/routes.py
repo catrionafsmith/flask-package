@@ -4,12 +4,14 @@ import openai
 import mysql.connector
 from storytellerapp import app
 from flask import render_template, request, redirect, url_for, session
+from .forms import SignUpForm, NewUserForm
 
 # OpenAI API key currently stored as an environment variable
 # i.e. on my local computer
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # secret key for Flask 'session' - like cookies I think
+# maybe secret key is for wtforms too?
 app.secret_key = b'_5#y2L"Fkkk4Q8z\n\xec]/'
 
 # Set up database connection
@@ -97,6 +99,23 @@ def ai_story():
             presence_penalty=0.0
         )
         return render_template("ai_story.html", result=response.choices[0].text)
+
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    form = SignUpForm()
+    if form.is_submitted():
+        result = request.form
+        return render_template('user.html', result=result)
+    return render_template('signup.html', form=form)
+
+@app.route('/register2', methods=['GET', 'POST'])
+def register2():
+    form = NewUserForm()
+    if form.is_submitted():
+        result = request.form
+        return render_template('user.html', result=result)
+    return render_template('register2.html', form=form)
+
 
 # def generate_prompt(childname, monster):
 #     return f"You are an expert children's author who specialises in writing engaging stories. Please write a 400 word story. The story should be about a kid called {childname}, who travels to a magical land and battles {monster}."

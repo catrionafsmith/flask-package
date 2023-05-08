@@ -1,0 +1,17 @@
+{% extends "base.html" %} 
+
+{% block content %} 
+<table border="1">
+    {% for key, value in result.items() %} 
+    <tr>
+        <th>
+            {{ key }}
+        </th>
+        <td>
+            {{ value }}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<p>Now we can write a story for {{result.username.capitalize()}} </p>
+{% endblock %}

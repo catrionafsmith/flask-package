@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mt-5 text-center"> Register New User </h2>
+<form action="/login" method="post">
+    <div class="row p-5 justify-content-center">
+        <div class="col-6">
+            <p>
+                {{form.username.label}} <br>
+                {{form.username(size=30)}}
+            </p>
+            <p>
+                {{form.password.label}} <br>
+                {{form.password(size=30)}}
+            </p>
+            <p>
+                {{form.gender.label}} <br>
+                {{form.gender()}}
+            </p>
+            <p>
+                {{form.age.label}} <br>
+                {{form.age()}}
+            </p>
+            <p>
+                {{form.routine.label}} <br>
+                {{form.routine()}}
+            </p>
+                <br>
+                {{form.submit()}} 
+            
+        </div>
+    </div>  
+</form>
+
+{% endblock %}
