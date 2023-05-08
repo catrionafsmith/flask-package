@@ -116,6 +116,9 @@ def register2():
         return render_template('user.html', result=result)
     return render_template('register2.html', form=form)
 
+@app.route('/bookshelf')
+def bookshelf():
+    return render_template('bookshelf.html')
 
 # def generate_prompt(childname, monster):
 #     return f"You are an expert children's author who specialises in writing engaging stories. Please write a 400 word story. The story should be about a kid called {childname}, who travels to a magical land and battles {monster}."

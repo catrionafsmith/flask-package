@@ -1,11 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="text-center">    
-        <img src="{{ url_for('static', filename='fairytale.png') }}" class="icon" />
-        <h1 class="mt-5 text-center">Welcome to Bedtime Bard</h1>
-        <a class="btn m-2" href="{{ url_for('register2') }}">Register Here</a>
-        <a class="btn m-2" href="{{ url_for('login') }}">Login Here</a>
+<div class="container my-5">
+    <div class="p-5 text-center bg-body-tertiary rounded-3">
+      <img src="{{ url_for('static', filename='fairytale.png') }}" width="200" height="200" class="bi mt-4 mb-3 icon" />
+        <h1 class="text-body-emphasis">Welcome to BedtimeBard</h1>
+      <p class="col-lg-8 mx-auto fs-5 text-muted">
+        Looking for a stress-free bedtime routine for your little ones? With just a few clicks, you can customize a unique and engaging story for your child, complete with a personalized routine to help them wind down and prepare for sleep. Sweet dreams guaranteed!
+      </p>
+      <div class="d-inline-flex gap-2 mb-5">
+        <a class="btn m-2 btn-lg px-4 rounded-pill" href="{{ url_for('register2') }}">Register Here</a>
+        <a class="btn m-2 btn-lg px-4 rounded-pill" href="{{ url_for('login') }}">Login Here</a>
+      </div>
     </div>
+  </div>
+  
     
     {% endblock %}

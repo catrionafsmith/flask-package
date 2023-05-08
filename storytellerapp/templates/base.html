@@ -11,6 +11,7 @@
     <!-- <script src="storytellerapp/static/bootstrap.min.css"></script> -->
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='sticky-footer-navbar.css')}}">
+    <link href="{{ url_for('static', filename='jumbotrons.css')}}" rel="stylesheet">
   
     <title>Base Document</title>
 </head>
@@ -36,7 +37,7 @@
                     <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Bookshelf</a>
+                    <a class="nav-link" href="{{ url_for('bookshelf') }}">Bookshelf</a>
                 </li>
               </ul>
             </div>
