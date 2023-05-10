@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="text-center">
-<h2 class="mt-5 text-center"> Register New User </h2>
+<h2 class="mt-5 text-center"> Register Your Details </h2>
 </div>
 <form action="/login" method="post">
     <div class="row p-5 justify-content-center">
@@ -15,9 +15,15 @@
                 {{form.password.label}} <br>
                 {{form.password(size=30)}}
             </p>
+            <br>
+            <h5> Tell us some details about your child...</h5>
             <p>
-                {{form.gender.label}} <br>
-                {{form.gender()}}
+                {{form.childname.label}} <br>
+                {{form.childname(size=30)}}
+            </p>
+            <p>
+                {{form.pronouns.label}} <br>
+                {{form.pronouns()}}
             </p>
             <p>
                 {{form.age.label}} <br>
@@ -27,7 +33,6 @@
                 {{form.routine.label}} <br>
                 {{form.routine()}}
             </p>
-                <br>
                 {{form.submit()}} 
             
         </div>

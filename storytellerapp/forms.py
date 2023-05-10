@@ -12,7 +12,7 @@ class NewUserForm(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
     childname = StringField("Child's Name", validators=[DataRequired(), Length(max=50)])
     #need to edit these with the actual options :
-    gender = SelectField('Gender', choices=[('male', 'Male'), ('female', 'Female'), ('other', 'Other')],
+    pronouns = SelectField('Pronouns', choices=[('female', 'she/her'), ('male', 'he/him'), ('other', 'they/them')],
                          validators=[DataRequired()])
     age = IntegerField('Age', validators=[DataRequired()])
     
